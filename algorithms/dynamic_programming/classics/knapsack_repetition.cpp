@@ -1,6 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Classic Dynamic Programming problem
+// We got Knapsack with capacity W, and n items
+// each item is given by pair (v,w) - value and weight
+// What is the maximum value of items, with weight <= capacity W  
+// if we have infinite quantity of items ? 
+
 const int maxW = 1e5 + 10;
 const int maxN = 100 + 10;
 
@@ -10,7 +16,6 @@ long long DP[maxW];
 // items parameters
 int weight[maxN];
 int value[maxN];
-
 
 void go() {
 
