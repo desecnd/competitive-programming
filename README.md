@@ -1,4 +1,4 @@
-# Copetitive Programming Gathered
+# Competitive Programming Gathered
 All my links, books, problems, algorithms, from Competitive Programming and Algorithms gathered in one place, sorted by topics.
 ## Books
 [Dasgupta, Papadimitriou, Vazirani - Algorithms](http://algorithmics.lsi.upc.edu/docs/Dasgupta-Papadimitriou-Vazirani.pdf)
