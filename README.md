@@ -10,7 +10,10 @@ All my links, books, problems, algorithms, from Competitive Programming and Algo
 ## Links
 
 Cool tool for finding practice problems on your own:  [A2 Online Judge](https://a2oj.com/categories)
+
 Platform for helping you work on your time with 2-hour contests and ranking system: [Codeforces](https://codeforces.com/contests)
+
+Github repository with lots of algorithms implemented for Competitive Programming by [KACTL Team](https://github.com/kth-competitive-programming/kactl)
 
 ## Topics
 
