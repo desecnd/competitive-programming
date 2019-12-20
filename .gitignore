@@ -2,3 +2,4 @@
 *.in
 *.exe
 *.py
+*.code-workspace
