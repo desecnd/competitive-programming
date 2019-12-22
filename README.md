@@ -15,6 +15,8 @@ Platform for helping you work on your time with 2-hour contests and ranking syst
 
 Github repository with lots of algorithms implemented for Competitive Programming by [KACTL Team](https://github.com/kth-competitive-programming/kactl)
 
+Great English video turtorials covering advanced topics from algorithms and data structures [Algorithms Live!](https://www.youtube.com/channel/UCBLr7ISa_YDy5qeATupf26w)
+
 ## Topics
 
 #### Complete Search
