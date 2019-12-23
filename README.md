@@ -18,48 +18,66 @@ Github repository with lots of algorithms implemented for Competitive Programmin
 Great English video turtorials covering advanced topics from algorithms and data structures [Algorithms Live!](https://www.youtube.com/channel/UCBLr7ISa_YDy5qeATupf26w)
 
 ## Topics
-
-#### Complete Search
-##### Branch and Bound
-##### Backtracking
-### Dynamic Programming
-##### Classics
-###### Knapsack
-###### Kadane Largest Subsequence Sum
-###### Kadane 2D
-###### Longest Increasing Subsequence
-###### Lavenstein Distance
-###### Coin Exchange
-##### DP over Subsets
-##### Digit DP 
-[flash_7 guide on Codeforces](https://codeforces.com/blog/entry/53960)
-Problems:
-[Digit Sum](https://www.spoj.com/problems/PR003004/)
-[Sum of Digits](https://www.spoj.com/problems/CPCRC1C/)
-##### DP on Trees
-###### Largest Independent Set
-Problems:
-[Vertex Cover](https://www.spoj.com/problems/PT07X/)
-
-### Greedy Technique 
-
-#### Meet in the Middle Technique
-
-#### Amorthized Cost
-##### Sliding Window
-##### 2 Pointers
-
-#### Combinatorics
-Guides:
-[Introduction on Math is Fun](https://www.mathsisfun.com/combinatorics/combinations-permutations.html)
-[Intermidiate guide on Combinatorics for Competetive Programming]
-
-#### Computational Geometry
-
-#### Graph Algorithms
-
-#### Asking Querries
-##### Prefix Sums
-##### Prefix Sums 2D
-##### Tree Querries
-##### Graph Querries
+### Data Structures
+* Union-Find Disjoint Sets
+* Fenwick Tree
+* Range Minimum Query
+* Minimum Queue
+* Hash Table
+* Bloom Filter 
+* Heap Priority Queue
+### Algorithms
+#### Sorting
+* Merge Sort
+* Quick Sort
+* Bucket Sort
+* Radix Sort
+* Binary Search
+#### Greedy
+* Deadlines 
+* Huffman Encoding
+#### Dynamic Programming
+* Knapsack
+* Coin Change
+* Longest Increasing Subsequence
+* Kadane Subarray Sum
+#### Geometry
+* Convex Hull
+* In/Out of Polygon point
+* Polygon Area
+* Distance Line to Point
+#### Sweep Line
+* Closest Points
+* Line Intersection
+* Rectangle Area
+#### Number Theory 
+* Euclidean Algorithm
+* Extended Euclidean Algorithm
+* Eratostheenes Sieve
+* Modular Inverse
+* Chinese Reminder Theorem
+#### Trees
+* Tree Diameter
+* Heavy-Light Decomposition
+* Centroid Decomposition
+* Lowest Common Ancestor
+* Euler Walk
+#### Graphs
+* Topological Sort
+* Tarjan Strongly Connected Components
+* Kosaraju Strongly Connected Components
+* Dijkstra Shortest Path 
+* Bellman Ford
+* Floyd Warshall 
+* Prim Minimum Spanning Tree 
+* Kruskal Minimum Spanning Tree
+* 2-Edge Connected Components
+* 2-Vertex Connected Components
+* Hamiltonian Path / Cycle
+* Eulerian Circuts
+* Max Flow / Min Cut
+#### Strings
+* Rabin Karp
+* Z-Algorithm
+* Manacher Palindrome Algorithm
+* Rolling Hashes
