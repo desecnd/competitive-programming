@@ -5,12 +5,17 @@ color default
 " Boolean Settings ----------------------------
 
 set shiftround  " set rounding with >> to col multiply of shitfwidth
-set number
+set number " row numbers
+set ruler " right corner numbers 
+set cursorline " if we want - underline 
+set autoindent " automatical indentation
+set noeb " no error beep
 
 " Value Settings ------------------------------
 
 set shiftwidth=4	" rounding with > (indenting)
 set tabstop=4 	" n of spaces in tab
+set timeoutlen=50 " time between keystrokes
 
 " Mappings ------------------------------------
 
