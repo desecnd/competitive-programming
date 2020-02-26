@@ -26,6 +26,7 @@ bool operator==(Point a, Point b) { return a.x == b.x && a.y == b.y; }
 bool operator!=(Point a, Point b) { return !(a == b); }
 T sq(Point p) { return p.x*p.x + p.y*p.y; }
 double abs(Point p) { return sqrt(sq(p)); }
+Point perp(Point v) { return {-v.y, v.x }; }
 
 T dot(Point v, Point w) { return v.x * w.x + v.y * w.y; } 
 bool isPerp(Point v, Point w) { return dot(v, w) == T(0); }
