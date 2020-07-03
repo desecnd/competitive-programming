@@ -47,7 +47,7 @@ void go() {
 	// init
 	vector<vi> A (n, vi(m));
 	vector<vll> PS (n + 1, {0});
-	PS[0] = vi(m + 1, 0);
+	PS[0] = vll(m + 1, 0ll);
 
 	for (vi &v : A) 
 	for (int &i : v) cin >> i;
