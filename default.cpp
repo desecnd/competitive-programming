@@ -14,7 +14,7 @@ using vll = vector<ll>;
 using pii = pair<int,int>;
 using graph = vector<vi>;
 
-#define FOR(name__, upper__) for (int (name__) = 0; (name__) < (upper__); ++(name__))
+#define FOR(name__, upper__) for (int name__ = 0; name__ < (upper__); ++name__)
 #define all(x) begin(x), end(x)
 #define mp make_pair
 #define mt make_tuple
