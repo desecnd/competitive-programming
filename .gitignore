@@ -3,6 +3,8 @@
 *.exe
 *.py
 *.code-workspace
-*.vscode
+.vscode/*
+.dist
 *~
-/practice/*
+practice/*
+!.vscode/tasks.json
