@@ -33,51 +33,57 @@
 using namespace std;
 
 using ll = long long;
-using vi = vector<int>;
-using vll = vector<ll>;
-using pii = pair<int,int>;
 
+#define FOR(name__, upper__) for (int name__ = 0; name__ < (upper__); ++name__)
 #define all(x) begin(x), end(x)
-#define mp make_pair
-#define mt make_tuple
+
+template<typename T>
+void initialize_matrix(vector<vector<T>>& matrix, int rows, int cols, T val) {
+    assert(matrix.empty());
+    FOR(row, rows) matrix.emplace_back(cols, val);
+}
+
+using rectangle = tuple<int, int, int, int>;
+
+template<typename T>
+class prefix_sums_2d {
+public:
+    int rows, cols;
+    vector<vector<T>> prefix_sum;
+
+    prefix_sums_2d(vector<vector<T>>& A) : rows(A.size()), cols(A[0].size()), prefix_sum(A) 
+    {
+        FOR(row, rows) for (int col = 1; col < cols; col++) 
+            prefix_sum[row][col] += prefix_sum[row][col - 1];
+
+        FOR(col, cols) for (int row = 1; row < rows; row++) 
+            prefix_sum[row][col] += prefix_sum[row - 1][col];
+    } 
+    
+    T query(rectangle coords) {
+        auto[ur, lc, dr, rc] = coords;
+        T result = prefix_sum[dr][rc];
+        if ( ur > 0 && lc > 0 ) result += prefix_sum[ur - 1][lc - 1];
+        if ( ur > 0 ) result -= prefix_sum[ur - 1][rc];
+        if ( lc > 0 ) result -= prefix_sum[dr][lc - 1];
+        return result;
+    }
+};
 
 void go() {
-	int n, m; cin >> n >> m;
+    int rows, cols;
+    cin >> rows >> cols;
+    
+    vector<vector<int>> value_matrix;
+    initialize_matrix(value_matrix, rows, cols, 0);
+    
+    FOR(row, rows) FOR(col, cols) 
+        cin >> value_matrix[row][col];
+    
+    prefix_sums_2d<int> value_sum(value_matrix);
 	
-	// init
-	vector<vi> A (n, vi(m));
-	vector<vll> PS (n + 1, {0});
-	PS[0] = vll(m + 1, 0ll);
-
-	for (vi &v : A) 
-	for (int &i : v) cin >> i;
-	
-	// calculate prefixSum for every row of A
-	for (int i = 0; i < n; i++) {
-		for (int j : A[i]) 	{
-			ll next = j + PS[i + 1].back();
-			PS[i + 1].push_back(next);
-		}
-	}
-
-	// summing up all colums to get 2D prefSums 
-	for (int j = 1; j <= m; j++) 
-	for (int i = 1; i <= n; i++) 
-		PS[i][j] += PS[i - 1][j];
-
-	int q; cin >> q;
-	pii a, b;
-
-	while (q--) {
-		cin >> a.first >> a.second >> b.first >> b.second;
-		cout << "Sum[(" << a.first << "," << a.second << "):(" 
-			<< b.first << "," << b.second << ")] = ";
-
-		// answering queries, explained above
-		ll AB = PS[b.first][b.second] + PS[a.first - 1][a.second - 1];
-		ll CD = PS[b.first][a.second - 1] + PS[a.first - 1][b.second];
-		cout << AB - CD << '\n';
-	}
+	// Sum from (0,5) to (3, 6)
+	cout << value_sum.query({0, 5, 3, 6}) << endl;
 }
 
 int main() {
