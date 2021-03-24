@@ -1,19 +1,15 @@
-// Setup for Competitive Programming 
-// Also added Shortcuts to 
-// - workbench.action.tasks.build for quick compile & run
-// - workbench.action.tasks.test for testing with predefined file example.in
 {
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "compile and run",
+            "label": "compile",
             "type": "shell",
             "windows": {
-                "command": "cd ${fileDirname} && g++ -O3 -Wextra -Wall ${fileBasename} -o ${fileBasenameNoExtension}.exe && ${fileBasenameNoExtension}.exe" 
+                "command": "cd ${fileDirname} && g++ -O3 -Wextra -Wall -std=c++14 ${fileBasename} -o ${fileBasenameNoExtension}.exe"
             },
             "presentation": {
                 "reveal": "always",
-                "focus": true,
+                "focus": true
             },
             "group": {
                 "kind": "build",
@@ -25,17 +21,17 @@
             "label": "test",
             "type": "shell",
             "windows": {
-                "command": "cd ${fileDirname} && ${fileBasenameNoExtension}.exe < example.in"
+                "command": "cd ${fileDirname} && ${fileBasenameNoExtension}.exe"
             },
             "presentation": {
                 "reveal": "always",
                 "focus": true
             },
-            "group":{
+            "group": {
                 "kind": "test",
                 "isDefault": true
             },
             "problemMatcher": []
-        }
+        },
     ]
 }
