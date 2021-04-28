@@ -9,7 +9,7 @@
             },
             "presentation": {
                 "reveal": "always",
-                "focus": true
+                "focus": false
             },
             "group": {
                 "kind": "build",
