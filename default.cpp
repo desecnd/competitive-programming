@@ -5,7 +5,8 @@
 * solution:
 */
 
-#include <bits/stdc++.h>
+#include <vector>
+#include <iostream>
 using namespace std;
 
 using ll = long long;
