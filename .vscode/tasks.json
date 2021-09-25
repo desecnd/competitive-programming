@@ -5,7 +5,10 @@
             "label": "compile",
             "type": "shell",
             "windows": {
-                "command": "cd ${fileDirname} && g++ -O3 -Wextra -Wall -std=c++17 ${fileBasename} -o ${fileBasenameNoExtension}.exe"
+                "command": "cd ${fileDirname} ; g++ -O3 -Wextra -Wall -std=c++17 ${fileBasename} -o ${fileBasenameNoExtension}.exe"
+            },
+            "linux": {
+                "command": "cd ${fileDirname} && g++ -O3 -Wextra -Wall -std=c++17 ${fileBasename} -o ${fileBasenameNoExtension}"
             },
             "presentation": {
                 "reveal": "always",
@@ -18,19 +21,35 @@
             "problemMatcher": []
         },
         {
-            "label": "test",
+            "label": "execute",
             "type": "shell",
             "windows": {
-                "command": "cd ${fileDirname} && ${fileBasenameNoExtension}.exe"
+                "command": "cd ${fileDirname} ; ./${fileBasenameNoExtension}.exe"
+            },
+            "linux": {
+                "command": "cd ${fileDirname} && ./${fileBasenameNoExtension}"
             },
             "presentation": {
                 "reveal": "always",
                 "focus": true
             },
-            "group": {
-                "kind": "test",
-                "isDefault": true
+            "group": "test",
+            "problemMatcher": []
+        },
+        {
+            "label": "test",
+            "type": "shell",
+            "windows": {
+                "command": "cd ${fileDirname} ; ./${fileBasenameNoExtension}.exe < example.in"
             },
+            "linux": {
+                "command": "cd ${fileDirname} && ./${fileBasenameNoExtension} < example.in"
+            },
+            "presentation": {
+                "reveal": "always",
+                "focus": true
+            },
+            "group": "test",
             "problemMatcher": []
         },
     ]
